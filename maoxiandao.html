@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        #game{
+            width: 1280px;
+            height: 610px;
+            overflow: hidden;
+            background-image: url("img/readyBg.jpg");
+            background-size: cover;
+            background-position:0 -320px;
+        }
+        .help{
+            width: 20%;
+            height: 350px;
+            margin-left: 100px;
+            padding-top: 40px;
+        }
+        .help span{
+            color: red;
+        }
+        #game>img{
+            margin-left: 260px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+<div id="game">
+    <div class="help">
+        <img src="img/help/Help.png" alt="">
+        <div class="help1">
+            <img src="img/help/Help1.png" alt="">
+            <span>长按</span>空格键攻击！
+        </div>
+        <div class="help2">
+            <img src="img/help/Help2.png" alt="">
+            伤害有<span>长按</span>！
+        </div>
+        <div class="help3">
+            <p>开局送三个，且用且 <span>珍惜</span></p>
+            <img src="img/help/boom.gif" alt="">一个格子为一个大招<br/>
+            <img src="img/help/exp.gif" alt="">
+            此乃 <span>经验瓶</span>，经验满了后，宝贝龙会 <span>进化</span>
+            ，终极状态会有 <span>龙卷风</span>等您 <span>探索</span>
+            <br/> <span>游戏时间</span>为 <span>90</span>秒哦！
+        </div>
+    </div>
+    <img src="img/start.gif" alt="" id="start">
+</div>
+<script type="text/javascript">
+    var start = document.getElementById("start");
+    start.onclick=function () {
+        start.src="img/startClick.gif";
+        location.href="game.html";
+    };
+</script>
+</body>
+</html>

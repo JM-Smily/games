@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        li{list-style-type: none;}
+        #game{
+            width: 1280px;
+            height: 610px;
+            overflow: hidden;
+            background-image: url("img/bg.jpg");
+            background-size: cover;
+            position: fixed;
+        }
+        #game img{
+            position: absolute;
+            z-index: 4;
+        }
+        #zz{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left:0;
+            z-index:2;
+            background-color: darkslategrey;
+            opacity: .5;
+            display: none;
+        }
+        #over{
+            width: 300px;
+            height: 200px;
+            position: absolute;
+            top: 0;
+            left:0;
+            bottom: 0;
+            right: 0;
+            margin:auto;
+            z-index: 6;
+            text-align: center;
+            background-image: url("img/ui/tipBg.png");
+            background-size: cover;
+            display: none;
+        }
+        #over h4{
+            width: 100%;
+            height: 20%;
+            padding-top: 50px;
+            color: black;
+            font-family: 微软雅黑;
+            font-size: 1.2em;
+            font-weight: 700;
+            font-family: sans-serif;
+            letter-spacing: 10px;
+            text-transform: uppercase;
+        }
+        #over p{
+            padding-bottom: 10px;
+        }
+        #over button{
+            width: 40%;
+            height: 40px;
+            border:none;
+            color: white;
+            text-align: center;
+        }
+        #over #restart{
+            background-color:indianred;
+        }
+        #over #exit{
+            background-color: grey;
+        }
+        #time{
+            width: 260px;
+            height: 50px;
+            margin:0 auto;
+            position: relative;
+        }
+        #time img{
+            width: 40px;
+            height: 50px;
+            margin-left: 10px;
+        }
+        #minute{
+            position: absolute;
+            top:0;
+            left: 50px;
+        }
+        #maohao{
+            position: absolute;
+            top:0;
+            left: 100px;
+        }
+        #second1{
+            position: absolute;
+            top:0;
+            left: 150px;
+        }
+        #second2{
+            position: absolute;
+            top:0;
+            left: 200px;
+        }
+        #jf{
+            width: 139px;
+            height: 50px;
+            position: absolute;
+            top:20px;
+            left: 1100px;
+            z-index: 2;
+            background-image: url("img/ui/RunnerGame.gif");
+        }
+        #jf span{
+            width: 100%;
+            height: 50px;
+            position: absolute;
+            top:26px;
+            right:-59px;
+        }
+        .exp{
+            position: absolute;
+            top:100px;
+            left: 20px;
+        }
+        #exp0{
+            clip: rect(0,31px,161px,0);
+        }
+        #expFull,#expMax{
+            opacity: 0;
+        }
+        #boom{
+            position: absolute;
+            top:280px;
+            left: 20px;
+        }
+    </style>
+</head>
+<body>
+<div id="game">
+    <div id="zz"></div>
+    <div id="over">
+        <h4>Game Over</h4>
+        <p id="score">您的分数为：</p>
+        <button id="restart">确认</button>
+        <button id = "exit">退出游戏</button>
+    </div>
+    <div id="time">
+        <img src="img/num/0.gif" alt="">
+        <img src="img/num/1.gif" alt="" id="minute">
+        <img src="img/num/d.png" alt="" id="maohao">
+        <img src="img/num/3.gif" alt="" id="second1">
+        <img src="img/num/0.gif" alt="" id="second2">
+    </div>
+    <div id="jf">
+        <span id="span1">0</span>
+    </div>
+    <div>
+        <img src="img/ui/back.gif" alt=""  id="back">
+    </div>
+    <div class="exp">
+        <img src="img/ui/exp0.png" alt="" id="exp0">
+        <img src="img/ui/expFull.gif" alt="" id="expFull">
+        <img src="img/ui/expMax.gif" alt="" id="expMax">
+    </div>
+    <div>
+        <img src="img/ui/boom/boom0.png" alt="" id="boom">
+    </div>
+</div>
+
+<script src="monster.js"></script>
+</body>
+</html>
